@@ -7,7 +7,7 @@ $ npm i next-level-console
 ```
 
 Example
-```
+```javascript
 const cl = require('next-level-console')
 cl.custom(info, color)
 // info = your console information
