@@ -1,7 +1,14 @@
 const chalk = require('chalk')
 
+let time
 
-function customConsole(...args) {
+function dateOn(value) {
+  return time = value ? new Date().toString() : ''
+}
+
+function custom(...args) {
+  const prefix = args[0]
+  const color = args[1] ? args[1] : []
   const consoleTypes = {
     log: console.log,
     error: console.error,
@@ -10,19 +17,36 @@ function customConsole(...args) {
     debug: console.debug
   }
 
-  function customPrefix(key) {
-    const time = chalk[args[2]](`[${new Date().toString()}]`)
-    const prefixMsg = chalk[args[3]](`[${args[0]}]`)
-    const keyType = chalk[args[1]](`[${key.toUpperCase()}]`)
-    return `${keyType}${prefixMsg}${time}: `
+  function customPrefix(key, args) {
+    let content
+    if (!time) {
+      content = [key.toUpperCase(), prefix.toUpperCase(), args]
+    } else {
+      content = [key.toUpperCase(), prefix.toUpperCase(), time, args]
+    }
+
+    const arrInfo = []
+    content.forEach((v, i) => {
+      let value = `[${v}]`
+      if (i === content.length - 2) {
+        value = `[${v}]: `
+      } else if (i === content.length - 1){
+        value = `${v}`
+      }
+      arrInfo.push(chalk[color[i] ? color[i] : 'white'](value))
+    })
+    return arrInfo.join('')
   }
 
   Object.keys(consoleTypes).forEach(key => {
     console[key] = (...args) => {
-      args.unshift(customPrefix(key))
-      consoleTypes[key](...args)
+      const result = customPrefix(key, args)
+      consoleTypes[key](result)
     }
   })
 }
 
-module.exports = customConsole
+module.exports = {
+  custom,
+  dateOn,
+}

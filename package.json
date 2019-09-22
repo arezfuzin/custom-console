@@ -1,8 +1,11 @@
 {
   "name": "next-level-console",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a package for custom console in javascript/nodejs",
   "main": "index.js",
+  "script": {
+    "test": "node test.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arezfuzin/next-level-console.git"
