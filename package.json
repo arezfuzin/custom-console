@@ -1,11 +1,11 @@
 {
-  "name": "custom-console",
+  "name": "next-level-console",
   "version": "1.0.0",
   "description": "This is a package for custom console in javascript/nodejs",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arezfuzin/custom-console.git"
+    "url": "git+https://github.com/arezfuzin/next-level-console.git"
   },
   "keywords": [
     "custom",
@@ -14,9 +14,9 @@
   "author": "arezfuzin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/arezfuzin/custom-console/issues"
+    "url": "https://github.com/arezfuzin/next-level-console/issues"
   },
-  "homepage": "https://github.com/arezfuzin/custom-console#readme",
+  "homepage": "https://github.com/arezfuzin/next-level-console#readme",
   "dependencies": {
     "chalk": "^2.4.2"
   }
