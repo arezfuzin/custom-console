@@ -1,0 +1,23 @@
+{
+  "name": "custom-console",
+  "version": "1.0.0",
+  "description": "This is a package for custom console in javascript/nodejs",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arezfuzin/custom-console.git"
+  },
+  "keywords": [
+    "custom",
+    "console"
+  ],
+  "author": "arezfuzin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arezfuzin/custom-console/issues"
+  },
+  "homepage": "https://github.com/arezfuzin/custom-console#readme",
+  "dependencies": {
+    "chalk": "^2.4.2"
+  }
+}
